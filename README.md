@@ -26,7 +26,7 @@ Twelve was inserted into the parenthesis as that is the number of elements (stoc
 
 ### 2a) TickerVolumes Loop
 
-Next, I needed to create a ‘for’ loop that would initialize the ``tickerVolumes`` to zero. In addition, I also needed to specify that the loop would iterate twelve times, once for each element (stock). As a result, the added code looked like this: 
+Next, I needed to create a ``for`` loop that would initialize the ``tickerVolumes`` to zero. In addition, I also needed to specify that the loop would iterate twelve times, once for each element (stock). As a result, the added code looked like this: 
 
     For i = 0 To 11
        tickerVolumes(i) = 0 
@@ -45,17 +45,17 @@ After writing that loop, I needed to write an additional script that would add t
 
 ### 3b) First Row ‘If-Then’ 
 
-The next task was creating an ‘if-then’ statement that would determine if the current row was the first row, while using the ``tickerIndex``. If that statement proved to be true, then the script would assign the current starting price to the ``tickerStartingPrices`` variable. As a result, I wrote the following script: 
+The next task was creating an ``if-then`` statement that would determine if the current row was the first row, while using the ``tickerIndex``. If that statement proved to be true, then the script would assign the current starting price to the ``tickerStartingPrices`` variable. As a result, I wrote the following script: 
 
     If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i - 1, 1).Value <> tickers(tickerIndex)
   
     Then tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
 
-The first half of the ‘If’ script (before the And) checks whether the current row’s ticker is within the ``tickerIndex`` while the second half checks whether the previous row’s ticker is not. If both statements are deemed true, then the ``tickerStartingPrice`` is assigned. 
+The first half of the ``if`` script (before the ``And``) checks whether the current row’s ticker is within the ``tickerIndex`` while the second half checks whether the previous row’s ticker is not. If both statements are deemed true, then the ``tickerStartingPrice`` is assigned. 
 
 ### 3c) Last Row ‘If-Then’ 
 
-Creating a ‘If-then’ statement to determine whether the current row was the last row was markedly like the ‘First Row Check.’ However ``Cells(i-1,1).Value`` is substituted with ``Cells(i+1, 1).Value`` to account for the fact we are concerned with the row below are current row rather than above. As a result, the statement looked like this: 
+Creating a ``if-then`` statement to determine whether the current row was the last row was markedly like the ‘First Row Check.’ However ``Cells(i-1,1).Value`` is substituted with ``Cells(i+1, 1).Value`` to account for the fact we are concerned with the row below are current row rather than above. As a result, the statement looked like this: 
 
     If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex)
   
@@ -63,7 +63,7 @@ Creating a ‘If-then’ statement to determine whether the current row was the 
 
 ### 3d) Increase TickerIndex
 
-The last ‘if-then’ statement sought to increase the tickerIndex if the next row’s ticker and the previous row’s ticker did not match. To do this I wrote the following script: 
+The last ``if-then`` statement sought to increase the ``tickerIndex`` if the next row’s ticker and the previous row’s ticker did not match. To do this I wrote the following script: 
 
     If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex)
   
@@ -73,7 +73,7 @@ The script specifies that if the if the next row’s ticker ``(Cells(i + 1, 1)``
 
 ### 4) ‘For’ Loop Output
 
-Finally, I created a ‘for’ loop that ran through all four of my arrays, ``tickers``, ``tickerVolumes``, ``tickerStartingPrices``, and ``tickerEndingPrices``, and output them to ‘Ticker’, ‘Total Daily Volume and ‘Return’ respectively. Since That header row was placed in the third row, I knew these values needed to start at the fourth row, descending downward until all loops were completed. The resulting script is as follows: 
+Finally, I created a ``for`` loop that ran through all four of my arrays, ``tickers``, ``tickerVolumes``, ``tickerStartingPrices``, and ``tickerEndingPrices``, and output them to ‘Ticker’, ‘Total Daily Volume and ‘Return’ respectively. Since that header row was placed in the third row, I knew these values needed to start at the fourth row, descending downward until all loops were completed. The resulting script is as follows: 
     
     Worksheets("All Stocks Analysis").Activate
     
