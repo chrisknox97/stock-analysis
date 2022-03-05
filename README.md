@@ -93,7 +93,10 @@ Yet, there are some disadvantages to refactoring code. If you are refactoring a 
 
 ### Advantages & Disadvantages of Refactoring this VBA Script
 
-Regarding the refactored script, the advantages I found aligned with those purported in the previous section. The script runs the code at a quicker rate. This fact would be extremely important if used on the Stock Market, where buying and selling of stocks rapidly remains of preeminent importance. 
+Regarding the refactored script, the advantages I found aligned with those purported in the previous section. The script runs the code at a quicker rate. This fact would be extremely important if used on the Stock Market, where buying and selling of stocks rapidly remains of preeminent importance. This speedy load time can be seen by the images that follow. 
+
+![VBA 2017 Loading Screen](https://github.com/chrisknox97/stock-analysis/blob/main/Resources/VBA_Challenge_2017.png) 
+![VBA 2018 Loading Screen](https://github.com/chrisknox97/stock-analysis/blob/main/Resources/VBA_Challenge_2018.png)
 
 While the disadvantages of the original VBA script stemmed from its lack of concise programming language, resulting in me receiving error messages more often than I would have preferred. 
 
