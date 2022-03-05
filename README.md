@@ -8,7 +8,7 @@
 
 ### 1a) Ticker Index 
 
-Starting with Challenge Starter Code from Module 2, I first sought to establish the ``tickerIndex`` variable as equal to 0 (as almost all programming languages start at zero). This was also necessary as it was later used to access the correct indexes between four arrays: the ``tickers`` array, the ``tickerVolumes`` array, the ``tickerStartingPrices`` array, and the ``tickerendingPrices`` array. And so, I entered the following code into VBA:
+Starting with Challenge Starter Code from Module 2, I first sought to establish the ``tickerIndex`` variable as equal to 0 (as almost all programming languages start at zero). This was also necessary as it was later used to access the correct indexes between four arrays: the ``tickers`` array, the ``tickerVolumes`` array, the ``tickerStartingPrices`` array, and the ``tickerEndingPrices`` array. And so, I entered the following code into VBA:
 
     tickerIndex = 0
   
