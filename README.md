@@ -69,7 +69,7 @@ The last ``if-then`` statement sought to increase the ``tickerIndex`` if the nex
   
     Then tickerIndex = tickerIndex + 1
 
-The script specifies that if the if the next row’s ticker ``(Cells(i + 1, 1)`` does not equal the ``tickerIndex``, then the ``tickerIndex`` will be increased by one. 
+The script specifies that if the next row’s ticker ``(Cells(i + 1, 1)`` does not equal the ``tickerIndex``, then the ``tickerIndex`` will be increased by one. 
 
 ### 4) ‘For’ Loop Output
 
@@ -98,5 +98,5 @@ Regarding the refactored script, the advantages I found aligned with those purpo
 ![VBA 2017 Loading Screen](https://github.com/chrisknox97/stock-analysis/blob/main/Resources/VBA_Challenge_2017.png) 
 ![VBA 2018 Loading Screen](https://github.com/chrisknox97/stock-analysis/blob/main/Resources/VBA_Challenge_2018.png)
 
-While the disadvantages of the original VBA script stemmed from its lack of concise programming language, resulting in me receiving error messages more often than I would have preferred. 
+While the disadvantages of the original VBA script stemmed from its lack of concise programming language, resulting in me receiving error messages more often than I would have preferred. I can also imagine more streamlined VBA as less accessible to newcomers to the field. 
 
