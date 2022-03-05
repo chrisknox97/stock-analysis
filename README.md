@@ -69,7 +69,7 @@ The last ‘if-then’ statement sought to increase the tickerIndex if the next 
   
     Then tickerIndex = tickerIndex + 1
 
-The script specifies that if the if the next row’s ticker ``(Cells(I + 1, 1)`` does not equal the ``tickerIndex``, then the ``tickerIndex`` will be increased by one. 
+The script specifies that if the if the next row’s ticker ``(Cells(i + 1, 1)`` does not equal the ``tickerIndex``, then the ``tickerIndex`` will be increased by one. 
 
 ### 4) ‘For’ Loop Output
 
