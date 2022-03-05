@@ -33,7 +33,7 @@ Next, I needed to create a ``for`` loop that would initialize the ``tickerVolume
     
 ### 2b) Looping Over All Rows
 
-But I also need to ensure that our loop iterates over every row. To do this I needed my loop to start at 2, avoiding the header row, and continuing until the rows were fully counted. This finished piece of code looked like the following:
+But I also needed to ensure that the loop iterated over every row. To do this I needed my loop to start at 2, avoiding the header row, and continuing until the rows were fully counted. This finished piece of code looked like the following:
 
     For i = 2 To RowCount
 
