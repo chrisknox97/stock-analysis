@@ -28,9 +28,8 @@ Twelve was inserted into the parenthesis as that is the number of elements (stoc
 
 Next, I needed to create a ‘for’ loop that would initialize the ``tickerVolumes`` to zero. In addition, I also needed to specify that the loop would iterate twelve times, once for each element (stock). As a result, the added code looked like this: 
 
-  ``For i = 0 To 11``
-  
-     ``tickerVolumes(i) = 0``
+    For i = 0 To 11
+       tickerVolumes(i) = 0 
     
 ### 2b) Looping Over All Rows
 
@@ -76,13 +75,13 @@ The script specifies that if the if the next row’s ticker ``(Cells(I + 1, 1)``
 
 Finally, I created a ‘for’ loop that ran through all four of my arrays, ``tickers``, ``tickerVolumes``, ``tickerStartingPrices``, and ``tickerEndingPrices``, and output them to ‘Ticker’, ‘Total Daily Volume and ‘Return’ respectively. Since That header row was placed in the third row, I knew these values needed to start at the fourth row, descending downward until all loops were completed. The resulting script is as follows: 
     
-    ``Worksheets("All Stocks Analysis").Activate``
+    Worksheets("All Stocks Analysis").Activate
     
-        ``Cells(4 + i, 1).Value = tickers(i)``
+        Cells(4 + i, 1).Value = tickers(i)
         
-        ``Cells(4 + i, 2).Value = tickerVolumes(i)``
+        Cells(4 + i, 2).Value = tickerVolumes(i)
         
-        ``Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1``
+        Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1
 
 ## Summary
 
