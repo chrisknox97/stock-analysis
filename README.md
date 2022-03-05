@@ -2,7 +2,7 @@
 
 ## Overview of Project 
 
-### To utilize Microsoft Visual Basic for Applications (VBA) with the intent to refactor code’s efficiency so that it may be more applicable for analysis of the entire stock market. 
+### To utilize Microsoft Visual Basic for Applications (VBA) with the intent to refactor a code’s efficiency so that it may be more applicable for analysis of the entire stock market. 
 
 ## Refactoring VBA
 
