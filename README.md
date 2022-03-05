@@ -10,17 +10,17 @@
 
 Starting with Challenge Starter Code from Module 2, I first sought to establish the ``tickerIndex`` variable as equal to 0 (as almost all programming languages start at zero). This was also necessary as it was later used to access the correct indexes between four arrays: the tickers array, the ``tickerVolumes`` array, the ``tickerStartingPrices`` array, and the ``tickerendingPrices`` array. And so, I entered the following code into VBA:
 
-``tickerIndex = 0``
+    tickerIndex = 0
   
 ### 1b) Output Arrays
 
 After creating the ticker index, I then created three additional output arrays. The ``tickerVolumes`` array was created as a Long data type. While the ``tickerStartingPrices`` and ``tickerEndingPrices`` were created as Single data types. The additions to the code were as follows: 
 
-  ``Dim tickerVolumes(12) As Long``
+    Dim tickerVolumes(12) As Long
   
-  ``Dim tickerStartingPrices(12) As Single``
+    Dim tickerStartingPrices(12) As Single
   
-  ``Dim tickerEndingPrices(12) As Single``
+    Dim tickerEndingPrices(12) As Single
 
 Twelve was inserted into the parenthesis as that is the number of elements (stocks) we are currently concerned with. 
 
@@ -35,21 +35,21 @@ Next, I needed to create a ‘for’ loop that would initialize the ``tickerVolu
 
 But I also need to ensure that our loop iterates over every row. To do this I needed my loop to start at 2, avoiding the header row, and continuing until the rows were fully counted. This finished piece of code looked like the following:
 
-  ``For i = 2 To RowCount``
+    For i = 2 To RowCount
 
 ### 3a) Increase TickerVolumes
 
 After writing that loop, I needed to write an additional script that would add the current ticker volumes to the current stock ticker. This script would use the ``tickerIndex`` as the variable for the index. Knowing that ‘Volume’ was in the eighth row, the script looked at follows: 
 
-   ``tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value``
+    tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(i, 8).Value
 
 ### 3b) First Row ‘If-Then’ 
 
 The next task was creating an ‘if-then’ statement that would determine if the current row was the first row, while using the ``tickerIndex``. If that statement proved to be true, then the script would assign the current starting price to the ``tickerStartingPrices`` variable. As a result, I wrote the following script: 
 
-  ``If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i - 1, 1).Value <> tickers(tickerIndex)``
+    If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i - 1, 1).Value <> tickers(tickerIndex)
   
-  ``Then tickerStartingPrices(tickerIndex) = Cells(i, 6).Value``
+    Then tickerStartingPrices(tickerIndex) = Cells(i, 6).Value
 
 The first half of the ‘If’ script (before the And) checks whether the current row’s ticker is within the ``tickerIndex`` while the second half checks whether the previous row’s ticker is not. If both statements are deemed true, then the ``tickerStartingPrice`` is assigned. 
 
@@ -57,17 +57,17 @@ The first half of the ‘If’ script (before the And) checks whether the curren
 
 Creating a ‘If-then’ statement to determine whether the current row was the last row was markedly like the ‘First Row Check.’ However ``Cells(i-1,1).Value`` is substituted with ``Cells(i+1, 1).Value`` to account for the fact we are concerned with the row below are current row rather than above. As a result, the statement looked like this: 
 
-  ``If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex)``
+    If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex)
   
-  ``Then tickerEndingPrices(tickerIndex) = Cells(i, 6).Value``
+    Then tickerEndingPrices(tickerIndex) = Cells(i, 6).Value
 
 ### 3d) Increase TickerIndex
 
 The last ‘if-then’ statement sought to increase the tickerIndex if the next row’s ticker and the previous row’s ticker did not match. To do this I wrote the following script: 
 
-  ``If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex)``
+    If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex)
   
-  ``Then tickerIndex = tickerIndex + 1``
+    Then tickerIndex = tickerIndex + 1
 
 The script specifies that if the if the next row’s ticker ``(Cells(I + 1, 1)`` does not equal the ``tickerIndex``, then the ``tickerIndex`` will be increased by one. 
 
