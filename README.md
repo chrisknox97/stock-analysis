@@ -55,7 +55,7 @@ The first half of the ``if`` script (before the ``And``) checks whether the curr
 
 ### 3c) Last Row ‘If-Then’ 
 
-Creating a ``if-then`` statement to determine whether the current row was the last row was markedly like the ‘First Row Check.’ However ``Cells(i-1,1).Value`` is substituted with ``Cells(i+1, 1).Value`` to account for the fact we are concerned with the row below are current row rather than above. As a result, the statement looked like this: 
+Creating a ``if-then`` statement to determine whether the current row was the last row, was markedly similar to the ‘First Row Check.’ However ``Cells(i-1,1).Value`` is substituted with ``Cells(i+1, 1).Value`` to account for the fact that we are concerned with the row below are current row, rather than above. As a result, the statement looked like this: 
 
     If Cells(i, 1).Value = tickers(tickerIndex) And Cells(i + 1, 1).Value <> tickers(tickerIndex)
   
