@@ -16,8 +16,8 @@ Starting with Challenge Starter Code from Module 2, I first sought to establish 
 
 After creating the ticker index, I then created three additional output arrays. The ``tickerVolumes`` array was created as a Long data type. While the ``tickerStartingPrices`` and ``tickerEndingPrices`` were created as Single data types. The additions to the code were as follows: 
 
-  ``Dim tickerVolumes(12) As Long``
- `` Dim tickerStartingPrices(12) As Single``
+  ####``Dim tickerVolumes(12) As Long``
+  ``Dim tickerStartingPrices(12) As Single``
   ``Dim tickerEndingPrices(12) As Single``
 
 Twelve was inserted into the parenthesis as that is the number of elements (stocks) we are currently concerned with. 
